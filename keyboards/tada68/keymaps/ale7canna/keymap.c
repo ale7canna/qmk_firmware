@@ -22,6 +22,11 @@
 #define MY_FN LT(EXTR, KC_APP)
 #define MY_ESC LT(EXTR, KC_ESC)
 
+enum custom_keycodes {
+  TCPOS = SAFE_RANGE,     // Macro that prints 'TCPOS.'
+  TP_FE                   // Macro that prints 'TCPOS.FrontEnd.'
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Layer BASE: (Base Layer) Default Layer
    * ,----------------------------------------------------------------------------------------------.
@@ -58,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
 [FUNL] = KEYMAP_ANSI(
   _______,  KC_F1 ,  KC_F2 ,  KC_F3 ,  KC_F4 ,  KC_F5 ,  KC_F6 ,  KC_F7 ,  KC_F8 ,  KC_F9 , KC_F10 , KC_F11 , KC_F12 , _______, _______,
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+  _______,  TCPOS ,  TP_FE , _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______,
   _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
   _______, _______, _______,                        _______,                       _______, _______, _______, _______, _______, _______),
@@ -103,3 +108,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_VOLD,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_VOLD,
   _______, _______, _______,                        _______,                       _______, _______, _______, _______, _______, _______),
   };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record)
+{
+  if (record->event.pressed)
+  {
+    switch (keycode)
+    {
+      case TCPOS:
+        SEND_STRING("TCPOS.");
+        return false;
+      case TP_FE:
+        SEND_STRING("TCPOS.FrontEnd.");
+        return false;
+    }
+  }
+  return true;
+};
