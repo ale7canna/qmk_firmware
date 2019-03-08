@@ -5,6 +5,7 @@
 #define BASE 0
 #define FUNL 1
 #define CURS 2 // cursor layer
+#define MEDI 3 // cursor layer
 
 #define MY_F MT(MOD_LSFT, KC_F)
 #define MY_J MT(MOD_RSFT, KC_J)
@@ -16,12 +17,13 @@
 #define MY_I MT(MOD_RGUI, KC_I)
 #define MY_SPC LT(FUNL, KC_SPC)
 #define MY_A LT(CURS, KC_A)
+#define MY_Q LT(MEDI, KC_Q)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[BASE] = LAYOUT(
 		KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_NO, KC_GRV,
-		KC_TAB, KC_Q, KC_W, MY_E, KC_R, KC_T, KC_Y, KC_U, MY_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS,
+		KC_TAB, MY_Q, KC_W, MY_E, KC_R, KC_T, KC_Y, KC_U, MY_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS,
 		KC_ESC, MY_A, MY_S, MY_D, MY_F, KC_G, KC_H, MY_J, MY_K, MY_L, KC_SCLN, KC_QUOT, KC_ENT,
 		KC_BSPC, KC_NO, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_DEL, KC_NO,
 		KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, MY_SPC, KC_SPC, KC_NO, KC_NO, KC_APP, KC_CAPS, RESET),
@@ -38,5 +40,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, _______, KC_HOME,  KC_UP , KC_END , KC_INS , _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, KC_PGUP, _______, KC_PGDN, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______),
+
+  [MEDI] = LAYOUT(
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______, KC_MPLY, KC_VOLU, KC_MUTE, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______, KC_MPRV, KC_VOLD, KC_MNXT, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______),
 };
