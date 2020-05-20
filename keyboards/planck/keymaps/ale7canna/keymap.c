@@ -24,20 +24,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
  * ,-----------------------------------------------------------------------------------.
- * | Tab  |Q/Medi|   W  |E/Gui |   R  |   T  |   Y  |   U  |I/Gui |   O  |   P  | Grv  |
+ * | Tab  |Q/Medi|   W  |E/Gui |   R  |   T  |   Y  |   U  |I/Gui |   O  |   P  | '/"  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Esc  |A/Curs|S/LAlt|D/LCtl|F/LShf|   G  |   H  |J/RShf|K/RCtl|L/RAlt|   ;  |Enter |
+ * | Esc  |A/Curs|S/LAlt|D/LCtl|F/LShf|   G  |   H  |J/RShf|K/RCtl|L/RAlt| ;/:  |Enter |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |BackSp|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | Del  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Grv  | Ctrl | Alt  | GUI  | Space/Func  |Space/Numbers| Left | Down |  Up  |Right |
+ * | =/+  |      | [/{  | Grv  | Space/Func  |Space/Numbers| Grv  | ]/}  |      | -/_  |
  * `-----------------------------------------------------------------------------------'
  */
 [BASE] = LAYOUT_planck_grid(
-  KC_TAB,  MY_Q,    KC_W,    MY_E,    KC_R ,   KC_T,    KC_Y,    KC_U,    MY_I,    KC_O,    KC_P,    KC_GRV ,
+  KC_TAB,  MY_Q,    KC_W,    MY_E,    KC_R ,   KC_T,    KC_Y,    KC_U,    MY_I,    KC_O,    KC_P,    KC_QUOT,
   KC_ESC,  MY_A,    MY_S,    MY_D,    MY_F ,   KC_G,    KC_H,    MY_J,    MY_K,    MY_L,    KC_SCLN, KC_ENT ,
   KC_BSPC, KC_Z,    KC_X,    KC_C,    KC_V ,   KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_DEL ,
-  KC_GRV , KC_LCTL, KC_LALT, KC_LGUI, KC_NO,   L_SPC,   KC_NO,  R_SPC,    KC_LEFT, KC_DOWN, KC_UP,  KC_RGHT
+  KC_EQL , KC_NO, KC_LBRC, KC_GRV,    KC_NO,   L_SPC,   KC_NO,   R_SPC,   KC_GRV,  KC_RBRC, KC_NO,   KC_MINS
 ),
 
 /* Cursor layer
