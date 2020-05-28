@@ -34,10 +34,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [BASE] = LAYOUT_planck_grid(
-  KC_TAB,  MY_Q,    KC_W,    MY_E,    KC_R ,   KC_T,    KC_Y,    KC_U,    MY_I,    KC_O,    KC_P,    KC_QUOT,
-  KC_ESC,  MY_A,    MY_S,    MY_D,    MY_F ,   KC_G,    KC_H,    MY_J,    MY_K,    MY_L,    KC_SCLN, KC_ENT ,
-  KC_BSPC, KC_Z,    KC_X,    KC_C,    KC_V ,   KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_DEL ,
-  KC_EQL , KC_BSLS, KC_LBRC, KC_GRV,    KC_NO,   L_SPC,   KC_NO,   R_SPC,   KC_GRV,  KC_RBRC, KC_CAPS,   KC_MINS
+  KC_TAB,  MY_Q,    KC_W,    MY_E,    KC_R ,   KC_T,    KC_Y,    KC_U,    MY_I,    KC_O,    KC_P,      KC_QUOT,
+  KC_ESC,  MY_A,    MY_S,    MY_D,    MY_F ,   KC_G,    KC_H,    MY_J,    MY_K,    MY_L,    KC_SCLN,   KC_ENT ,
+  KC_BSPC, KC_Z,    KC_X,    KC_C,    KC_V ,   KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,   KC_DEL ,
+  KC_EQL , KC_BSLS, KC_LBRC, KC_GRV,  KC_NO,   L_SPC,   KC_NO,   R_SPC,   KC_GRV,  KC_RBRC, KC_CAPS,   KC_MINS
 ),
 
 /* Cursor layer
@@ -115,3 +115,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 };
+
