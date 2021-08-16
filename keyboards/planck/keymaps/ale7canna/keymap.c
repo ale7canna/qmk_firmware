@@ -22,6 +22,7 @@
 #define MY_Q LT(MEDI, KC_Q)
 #define L_SPC LT(FLAY, KC_SPC)
 #define R_SPC LT(NUMB, KC_SPC)
+#define MY_G MT(MOD_HYPR, KC_G)
 
 enum combos {
   SPECIAL_LAYER
@@ -52,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * | Tab  |Q/Medi|   W  |E/Gui |   R  |   T  |   Y  |   U  |I/Gui |   O  |   P  | '/"  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Esc  |A/Curs|S/LAlt|D/LCtl|F/LShf|   G  |   H  |J/RShf|K/RCtl|L/RAlt| ;/:  |Enter |
+ * | Esc  |A/Curs|S/LAlt|D/LCtl|F/LShf|G/Hypr|   H  |J/RShf|K/RCtl|L/RAlt| ;/:  |Enter |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |BackSp|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | Del  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -61,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [BASE] = LAYOUT_planck_grid(
   KC_TAB,  MY_Q,    KC_W,    MY_E,    KC_R ,   KC_T,    KC_Y,    KC_U,    MY_I,    KC_O,    KC_P,      KC_QUOT,
-  KC_ESC,  MY_A,    MY_S,    MY_D,    MY_F ,   KC_G,    KC_H,    MY_J,    MY_K,    MY_L,    KC_SCLN,   KC_ENT ,
+  KC_ESC,  MY_A,    MY_S,    MY_D,    MY_F ,   MY_G,    KC_H,    MY_J,    MY_K,    MY_L,    KC_SCLN,   KC_ENT ,
   KC_BSPC, KC_Z,    KC_X,    KC_C,    KC_V ,   KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,   KC_DEL ,
   KC_EQL , KC_BSLS, KC_LBRC, KC_GRV,  KC_NO,   L_SPC,   KC_NO,   R_SPC,   KC_GRV,  KC_RBRC, KC_BSLS,   KC_MINS
 ),
